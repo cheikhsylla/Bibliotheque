@@ -1,20 +1,29 @@
 <template>
-  <v-app  >
+  <div>
     <Navbar/>
-    <v-main class="maincolor">
-    <router-view></router-view>
-    </v-main>
+    
+    <!-- <p v-for="(computer,index) in computers " :key="index">{{computer}}</p> -->
+    
+    
 
-  </v-app>
+  </div>
 </template>
 
 <script>
+import computers from '@/Books/computer.js';
+//  const bb = JSON.stringify(books);
+
 // Nav bar mmenu importation 
 import Navbar from '@/components/Navbar'
 export default {
   name: 'App',
   components:{
     Navbar
+  },
+  data() {
+    return {
+      computers
+    }
   },
 }
 </script>
